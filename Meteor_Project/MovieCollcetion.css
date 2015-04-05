@@ -1,0 +1,126 @@
+/*Css Declaration for the webpage */
+/*
+Author-Ramkumar Muthu
+@ToDo:
+Make it more responsive based on devices.
+*/
+/*Styles that applied to the whole page*/
+body {
+  font-family: sans-serif;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+/*Styles applied to both header and table sections*/
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+/*Style applied to the headd section*/
+.head{
+  padding: 1% 1% 1% 1%;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 0.5%;
+  display: block;
+  margin-right: 1em;
+}
+/*Style applied to h1 tag*/
+h4{
+display:inline-block;
+}
+/*Styles applied to input fields label title*/
+h4.one
+{
+margin-right:27%;
+}
+/*Style applied to input field label year and genre*/
+h4.two
+{
+margin-left:8%;
+}
+/*Style applied to textbox movie name*/
+input.textbox1
+{
+margin-right:9.5%;
+width:32%;
+}
+/*style applied to textbox year*/
+input#year
+{
+width:10%;
+}
+/*Style applied to Genre dropdown box*/
+.values
+{
+margin-left:6%;
+}
+/*style applied to Add/Update button*/
+.moviedata
+{
+margin-left:20%;
+background-color:white;
+border-color:black;
+}
+/*Style applied to Edit and Delete button*/
+.edit,.delete
+{
+background-color:white;
+border-color:black;
+display:block;
+margin:auto;
+}
+/*Style applied to table for display movies*/
+table{
+width:100%;
+height:90%;
+border:1px solid black;
+border-collapse:collapse;
+margin-bottom:2%;
+margin-top:2%;
+}
+/*Style applied for table header*/
+th{
+background-color:grey;
+}
+/*Style applied for odd table rows*/
+tr:nth-child(odd) {
+    background-color: white;
+}
+/*Style applied for even table rows*/
+tr:nth-child(even) {
+    background-color: #C0C0C0;
+}
+/*Style applied for table header title*/
+th.title
+{
+width:50%;
+text-align:left;
+}
+/*Style applied for table header Release Year*/
+th.releaseyear
+{
+width:20%;
+}
+/*Style applied to table header and rows*/
+th,tr{
+text-align:left;
+}
+/*Style applied to table header and columns*/
+th,td
+{
+border-right:1px solid black;
+width:10%;
+}
