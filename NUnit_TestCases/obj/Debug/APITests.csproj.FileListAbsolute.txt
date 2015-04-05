@@ -1,0 +1,9 @@
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Tests.dll.config
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Tests.dll
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Tests.pdb
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\nunit.framework.dll
+C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\nunit.framework.xml
+C:\Users\dell\Desktop\Colligo\Tests\obj\Debug\Tests.dll
+C:\Users\dell\Desktop\Colligo\Tests\obj\Debug\Tests.pdb
+C:\Users\dell\Desktop\Colligo\Tests\obj\Debug\APITests.csprojResolveAssemblyReference.cache

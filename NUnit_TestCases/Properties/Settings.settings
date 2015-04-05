@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tests.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="venue_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://api.eventful.com/json/venues/get</Value>
+    </Setting>
+    <Setting Name="key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MgGgJL4Z3Tdp8c3J</Value>
+    </Setting>
+    <Setting Name="id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">V0-001-001308302-0</Value>
+    </Setting>
+    <Setting Name="mature" Type="System.String" Scope="User">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="keywords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">books</Value>
+    </Setting>
+    <Setting Name="location" Type="System.String" Scope="User">
+      <Value Profile="(Default)">vancouver</Value>
+    </Setting>
+    <Setting Name="eventSearch_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://api.eventful.com/json/events/search</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

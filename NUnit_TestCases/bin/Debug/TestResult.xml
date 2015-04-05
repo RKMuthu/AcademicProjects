@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Tests.dll" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-02-21" time="21:26:58">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dell\Desktop" machine-name="DELL-PC" user="dell" user-domain="dell-PC" />
+  <culture-info current-culture="en-IN" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dell\Desktop\Colligo\Tests\bin\Debug\Tests.dll" executed="True" result="Success" success="True" time="3.759" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="3.734" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="commonTests" executed="True" result="Success" success="True" time="1.989" asserts="0">
+            <results>
+              <test-suite type="ParameterizedTest" name="performanceCheck" executed="True" result="Success" success="True" time="1.975" asserts="0">
+                <properties>
+                  <property name="MaxTime" value="1000" />
+                </properties>
+                <results>
+                  <test-case name="Tests.commonTests.performanceCheck(&quot;http://api.eventful.com/rest/venues/get?app_key=MgGgJL4Z3Tdp8c3J&amp;venue_id=V0-001-001308302-0&amp;mature=all&quot;)" executed="True" result="Success" success="True" time="1.220" asserts="0" />
+                  <test-case name="Tests.commonTests.performanceCheck(&quot;http://api.eventful.com/json/events/search?app_key=MgGgJL4Z3Tdp8c3J&amp;keywords=books&amp;location=vancouver&quot;)" executed="True" result="Success" success="True" time="0.730" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="testEventsSearch" executed="True" result="Success" success="True" time="1.289" asserts="0">
+            <results>
+              <test-case name="Tests.testEventsSearch.checkParameterURL" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+              <test-case name="Tests.testEventsSearch.checkTotalItems" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="testVenuesGet" executed="True" result="Success" success="True" time="0.444" asserts="0">
+            <results>
+              <test-case name="Tests.testVenuesGet.checkParameterURL" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+              <test-case name="Tests.testVenuesGet.checkVenueAddress" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="Tests.testVenuesGet.checkVenueID" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+              <test-case name="Tests.testVenuesGet.checkVenueProperty" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
