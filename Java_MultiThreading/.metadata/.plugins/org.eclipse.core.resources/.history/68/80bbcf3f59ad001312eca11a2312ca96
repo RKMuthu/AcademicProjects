@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+
+public class ManagerRunnable implements Runnable {
+	private Store store;
+	ManagerRunnable(Store obj)
+	{
+		store=obj;
+	}
+	@Override
+	public void run() {
+		String name = Thread.currentThread().getName();
+		while(true)
+		{
+		ArrayList<Item> items=store.getItems();
+		boolean check=false;
+		synchronized (store) {
+			System.out.println("manager thread stated");
+			for(int i=0;i<items.size();i++)
+			{
+				if((items.get(i).getTempQuantity())<0)
+				{
+					check=true;
+					break;
+				}
+			}
+			if(check)
+			{
+				for(int i=0;i<items.size();i++)
+				{
+					items.get(i).setQuantity(50);
+					items.get(i).setTempQuantity(50);
+				}
+			}
+			System.out.println("Store quantity Item1 "+items.get(0).getQuantity()+" Item2 "+items.get(1).getQuantity()+" item3 "+items.get(2).getQuantity()+" item4 "+items.get(3).getQuantity()+" item5 "+items.get(4).getQuantity());
+			store.notifyAll();
+		}
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			System.out.println("Interrupted during sleep for thread "+name);
+		}
+		}
+	}
+
+}

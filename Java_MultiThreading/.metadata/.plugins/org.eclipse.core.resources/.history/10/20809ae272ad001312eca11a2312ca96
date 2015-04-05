@@ -1,0 +1,60 @@
+import java.lang.Thread.State;
+
+
+public class Simulator {
+	/**
+	 * Create 5 customer threads which constantly request for items in the store and 1 manager threads
+	 * which constantly restocks the inventory when the item is depleted
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	Store obj=new Store();
+	while(true)
+	{
+		CustomerRunnable customer1=new CustomerRunnable(obj); 
+		Thread thread1=new Thread(customer1,"customer1");
+		CustomerRunnable customer2=new CustomerRunnable(obj); 
+		Thread thread2=new Thread(customer2,"customer2");
+		CustomerRunnable customer3=new CustomerRunnable(obj);
+		Thread thread3=new Thread(customer3,"customer3");
+		CustomerRunnable customer4=new CustomerRunnable(obj);
+		Thread thread4=new Thread(customer4,"customer4");
+		CustomerRunnable customer5=new CustomerRunnable(obj);
+		Thread thread5=new Thread(customer5,"customer5");
+		ManagerRunnable manager=new ManagerRunnable(obj);
+		Thread thread6=new Thread(manager,"Manager");
+		thread1.start();
+		thread2.start();
+		thread3.start();
+		thread4.start();
+		thread5.start();
+		while(!((((thread1.getState())==(State.RUNNABLE))||((thread1.getState())==(State.WAITING))||((thread1.getState())==(State.TERMINATED))||((thread1.getState())!=(State.NEW)))&&
+				(((thread2.getState())==(State.RUNNABLE))||((thread2.getState())==(State.WAITING))||((thread2.getState())==(State.TERMINATED))||((thread2.getState())!=(State.NEW)))&&
+				(((thread3.getState())==(State.RUNNABLE))||((thread3.getState())==(State.WAITING))||((thread3.getState())==(State.TERMINATED))||((thread3.getState())!=(State.NEW)))&&
+				(((thread4.getState())==(State.RUNNABLE))||((thread4.getState())==(State.WAITING))||((thread4.getState())==(State.TERMINATED))||((thread4.getState())!=(State.NEW)))&&
+				(((thread5.getState())==(State.RUNNABLE))||((thread5.getState())==(State.WAITING))||((thread5.getState())==(State.TERMINATED))||((thread5.getState())!=(State.NEW)))&&
+				((thread6.getState())==(State.NEW))))
+		{
+		}
+		thread6.start();
+		while(!((((thread1.getState())==(State.RUNNABLE))||((thread1.getState())==(State.WAITING))||((thread1.getState())==(State.TERMINATED)))&&
+				(((thread2.getState())==(State.RUNNABLE))||((thread2.getState())==(State.WAITING))||((thread2.getState())==(State.TERMINATED)))&&
+				(((thread3.getState())==(State.RUNNABLE))||((thread3.getState())==(State.WAITING))||((thread3.getState())==(State.TERMINATED)))&&
+				(((thread4.getState())==(State.RUNNABLE))||((thread4.getState())==(State.WAITING))||((thread4.getState())==(State.TERMINATED)))&&
+				(((thread5.getState())==(State.RUNNABLE))||((thread5.getState())==(State.WAITING))||((thread5.getState())==(State.TERMINATED)))))		{
+		}
+		try {
+			thread1.join();
+			thread2.join();
+			thread3.join();
+			thread4.join();
+			thread5.join();
+			thread6.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	}
+}

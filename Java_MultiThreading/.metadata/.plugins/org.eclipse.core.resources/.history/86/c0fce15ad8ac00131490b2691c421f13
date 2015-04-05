@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+
+public class sample {
+	String s="hello";
+	void display()
+	{
+		System.out.println();
+	}
+
+}

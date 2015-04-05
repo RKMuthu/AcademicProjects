@@ -1,0 +1,41 @@
+import java.lang.Thread.State;
+
+
+public class Simulator {
+	/**
+	 * Create 5 customer threads which constantly request for items in the store and 1 manager threads
+	 * which constantly restocks the inventory when the item is depleted
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	Store obj=new Store();
+	CustomerRunnable customer1=new CustomerRunnable(obj); 
+	Thread thread1=new Thread(customer1,"customer1");
+	CustomerRunnable customer2=new CustomerRunnable(obj); 
+	Thread thread2=new Thread(customer2,"customer2");
+	CustomerRunnable customer3=new CustomerRunnable(obj);
+	Thread thread3=new Thread(customer3,"customer3");
+	CustomerRunnable customer4=new CustomerRunnable(obj);
+	Thread thread4=new Thread(customer4,"customer4");
+	CustomerRunnable customer5=new CustomerRunnable(obj);
+	Thread thread5=new Thread(customer5,"customer5");
+	ManagerRunnable manager=new ManagerRunnable(obj);
+	Thread thread6=new Thread(manager,"Manager");
+	while(true)
+	{
+		thread1.start();
+		thread2.start();
+		thread3.start();
+		thread4.start();
+		thread5.start();
+		while(!(((thread1.getState())==(State.RUNNABLE))&&((thread2.getState())==(State.RUNNABLE))&&((thread3.getState())==(State.RUNNABLE))&&((thread4.getState())==(State.RUNNABLE))&&((thread5.getState())==(State.RUNNABLE))))
+		{
+		}
+		thread6.start();
+		while(!(((thread1.getState())==(State.BLOCKED))&&((thread2.getState())==(State.BLOCKED))&&((thread3.getState())==(State.BLOCKED))&&((thread4.getState())==(State.BLOCKED))&&((thread5.getState())==(State.BLOCKED))))
+		{
+			
+		}
+	}
+	}
+}

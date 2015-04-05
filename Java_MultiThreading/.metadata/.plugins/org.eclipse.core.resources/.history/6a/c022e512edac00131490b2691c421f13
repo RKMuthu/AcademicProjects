@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+
+public class Store {
+	ArrayList<Item> items=new ArrayList<Item>();
+	Store()
+	{
+	Item item1=new Item("apple",50);
+	Item item2=new Item("oranges",50);
+	Item item3=new Item("pineapple",50);
+	Item item4=new Item("persimmons",50);
+	Item item5=new Item("kumquats",50);
+	items.add(item1);
+	items.add(item2);
+	items.add(item3);
+	items.add(item4);
+	items.add(item5);
+	}
+	public boolean  getOrder(ArrayList itemname,ArrayList quantities)
+	{
+		for(int i=0;i<itemname.size();i++)
+		{
+			if(!(itemname.get(i).equals(items.get(i).getName())))
+			{
+				System.out.println("Invalid Itemname given");
+				return false;
+			}
+		}
+		for(int i=0;i<quantities.size();i++)
+		{
+			if(((int)(quantities.get(i))-(items.get(i).getQuantity()))<0)
+			{
+				return false;
+			}			
+		}
+		for(int i=0;i<quantities.size();i++)
+		{
+			items.get(i).setQuantity((items.get(i).getQuantity())-(quantities.get(i)));
+		}
+		return true;
+		
+	}
+
+
+
+}

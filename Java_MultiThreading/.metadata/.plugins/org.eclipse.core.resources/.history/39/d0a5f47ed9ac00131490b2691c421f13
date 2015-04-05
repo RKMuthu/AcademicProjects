@@ -1,0 +1,28 @@
+import java.awt.List;
+import java.util.ArrayList;
+
+
+public class sample {
+	
+	ArrayList<Item> list=new ArrayList<Item>();
+	Item item1=new Item("apple",44);
+	 ArrayList<Rectangle> list=new ArrayList<Rectangle>();
+	 Rectangle	rect1	=	new	Rectangle(5,	10,	20,	30);		
+	 Rectangle	rect2	=	new	Rectangle(10,	20,	30,	15);		
+	 Rectangle	rect3	=	new	Rectangle(20,	30,	35,	10);
+	 //creates the comparator object.
+	 Comparator<Rectangle>	comp	=	new	RectangleComparator();
+	 //Adds the objects to the list.
+	 list.add(rect1);
+	 list.add(rect2);
+	 list.add(rect3);
+	 //sorts the objects by comparator
+	 Collections.sort(list,	comp);	
+	 //Display the sorted objects in the List
+	 for(int i=0;i<list.size();i++)
+	 {
+		 Rectangle obj=list.get(i);
+		 System.out.println((obj.getWidth())*(obj.getHeight()));
+	 }
+
+}
