@@ -1,0 +1,68 @@
+body
+{
+	background-color: #6495ED;
+	height: 100%;
+	
+}
+
+#test
+{
+	margin:3%;
+	width:90%;
+	min-height:80%;
+	position:absolute;
+	background-color: white;
+}
+
+#testHeader
+{
+	margin: 3%;
+	font-weight: bold;
+}
+
+#inputRegion
+{
+	margin: 3%;
+	height: 60%;
+}
+
+#textAreaRegion
+{
+	margin: 3%;
+	position:absolute;
+	min-height: 60%; 
+	height: 60%;
+	width: 100%;
+}
+
+.textboxSize
+{
+	width: 40%;
+}
+textarea
+{
+	min-height: 80%; 
+	height: 80%;
+	width: 37%;
+	float:left;
+	
+}
+
+button,#buttons
+{
+	margin-left: 3%;
+	
+}
+
+#buttons
+{
+	float:left;
+	display: inline-block;
+}
+
+#sortbyName,#sortbyValue,#delete,#showXml
+{
+	width:100%;
+	display:block;
+	margin-bottom: 10%;
+}

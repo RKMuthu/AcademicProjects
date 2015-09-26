@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="jqueryAssnt.js"></script>
+</head>
+<body>
+<div id="test">
+<div id="testHeader">
+Test
+</div>
+<div id="inputRegion">
+Name/Value Pair
+<br />
+<input type="text" id="inputText" placeholder="Name=Value" class="textboxSize" />
+<button id="add" type="button" onclick="addText()">Add</button>
+</div>
+<div id="textAreaRegion">
+Name/Value Pair List
+<br />
+<textarea id="txtarea"> 
+</textarea>
+<div id="buttons">
+<button id="sortbyName" type="button" onclick="sortbyName()">Sort by name</button> 
+<button id="sortbyValue"  type="button" onclick="sortbyValue()">Sort by Value</button>
+<button id="delete" type="button" onclick="deleteSelected()">Delete</button>
+<button id="showXml" type="button" onclick="showXML()">Show Xml</button>
+</div>
+</div>
+</div>
+</body>
+</html>
